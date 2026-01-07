@@ -54,9 +54,9 @@ const CVDownload = () => {
     doc.setFontSize(12);
     doc.setTextColor(...mutedColor);
     doc.text("Operations Manager & Internal Operations Specialist", 20, y);
-    y += 15;
+    y += 25; // Extra space to clear the photo
     
-    // Divider
+    // Divider (positioned below the photo)
     doc.setDrawColor(200, 200, 200);
     doc.line(20, y, 190, y);
     y += 10;
