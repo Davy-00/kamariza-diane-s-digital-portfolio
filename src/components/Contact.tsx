@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, MapPin } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -29,7 +29,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8"
+          className="mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-6"
         >
           <a
             href="mailto:kamariza.diane@email.com"
@@ -38,6 +38,16 @@ const Contact = () => {
             <Mail className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
               kamariza.diane@email.com
+            </span>
+          </a>
+
+          <a
+            href="tel:+250788123456"
+            className="group flex items-center gap-3 px-6 py-4 border border-border rounded-full hover:border-foreground transition-colors duration-300"
+          >
+            <Phone className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+              +250 788 123 456
             </span>
           </a>
 
