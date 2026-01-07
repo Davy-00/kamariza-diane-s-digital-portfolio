@@ -1,14 +1,11 @@
-import Navigation from "@/components/Navigation";
+import Layout from "@/components/Layout";
 import Skills from "@/components/Skills";
 
 const SkillsPage = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
-      <div className="pt-20">
-        <Skills />
-      </div>
-    </div>
+    <Layout>
+      <Skills />
+    </Layout>
   );
 };
 

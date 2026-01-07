@@ -19,7 +19,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-32 px-6 bg-secondary/30">
+    <section className="py-24 px-6 bg-secondary/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -33,6 +33,9 @@ const Experience = () => {
           <h2 className="mt-4 text-4xl md:text-5xl font-display font-light tracking-tight">
             Work History
           </h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+            A journey of growth, learning, and delivering results across different roles and industries.
+          </p>
         </motion.div>
 
         <div className="mt-16 space-y-12">
@@ -56,6 +59,22 @@ const Experience = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Call to action */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 p-8 border border-border rounded-2xl text-center"
+        >
+          <p className="text-muted-foreground">
+            Interested in my background?{" "}
+            <a href="/resume" className="text-foreground underline underline-offset-4 hover:no-underline">
+              Download my full CV
+            </a>
+          </p>
+        </motion.div>
       </div>
     </section>
   );
