@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
   return (
@@ -10,10 +11,30 @@ const Hero = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center max-w-4xl"
       >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
+          className="mb-8"
+        >
+          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto">
+            <img
+              src={profilePhoto}
+              alt="Kamariza Diane"
+              className="w-full h-full object-cover rounded-full ring-2 ring-border/50"
+            />
+            <motion.div
+              className="absolute inset-0 rounded-full ring-2 ring-primary/20"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+            />
+          </div>
+        </motion.div>
+
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
           className="text-sm tracking-[0.3em] text-muted-foreground uppercase"
         >
           Operations Manager
