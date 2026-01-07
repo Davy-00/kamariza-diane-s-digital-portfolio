@@ -1,13 +1,15 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import Skills from "@/components/Skills";
 
-const Index = () => {
+const SkillsPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <Hero />
+      <div className="pt-20">
+        <Skills />
+      </div>
     </div>
   );
 };
 
-export default Index;
+export default SkillsPage;
