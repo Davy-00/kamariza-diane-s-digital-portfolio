@@ -2,14 +2,46 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { jsPDF } from "jspdf";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const CVDownload = () => {
-  const handleDownload = () => {
+  const handleDownload = async () => {
     const doc = new jsPDF();
     
     // Set up fonts and colors
     const primaryColor = [51, 51, 51] as const;
     const mutedColor = [102, 102, 102] as const;
+    
+    // Load profile image
+    const loadImage = (src: string): Promise<string> => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.onload = () => {
+          const canvas = document.createElement("canvas");
+          canvas.width = img.width;
+          canvas.height = img.height;
+          const ctx = canvas.getContext("2d");
+          if (ctx) {
+            ctx.drawImage(img, 0, 0);
+            resolve(canvas.toDataURL("image/jpeg"));
+          } else {
+            reject(new Error("Failed to get canvas context"));
+          }
+        };
+        img.onerror = reject;
+        img.src = src;
+      });
+    };
+
+    try {
+      const imageData = await loadImage(profilePhoto);
+      
+      // Add circular profile photo (positioned in top right)
+      doc.addImage(imageData, "JPEG", 155, 15, 35, 35);
+    } catch (error) {
+      console.log("Could not load profile image:", error);
+    }
     
     let y = 20;
     
