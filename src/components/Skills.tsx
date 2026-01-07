@@ -1,19 +1,23 @@
 import { motion } from "framer-motion";
 
-const skills = [
-  "Process Optimization",
-  "Team Leadership",
-  "Strategic Planning",
-  "Project Management",
-  "Inventory Management",
-  "Data Analysis",
-  "Workflow Design",
-  "Cross-functional Collaboration",
+const skillCategories = [
+  {
+    title: "Operations",
+    skills: ["Process Optimization", "Workflow Design", "Inventory Management", "Quality Control"],
+  },
+  {
+    title: "Leadership",
+    skills: ["Team Leadership", "Cross-functional Collaboration", "Stakeholder Management", "Mentoring"],
+  },
+  {
+    title: "Strategy",
+    skills: ["Strategic Planning", "Project Management", "Data Analysis", "Performance Metrics"],
+  },
 ];
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -27,29 +31,39 @@ const Skills = () => {
           <h2 className="mt-4 text-4xl md:text-5xl font-display font-light tracking-tight">
             Skills & Capabilities
           </h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
+            A diverse skill set developed through hands-on experience in operations and management.
+          </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-12 flex flex-wrap gap-3"
-        >
-          {skills.map((skill, index) => (
-            <motion.span
-              key={skill}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+        <div className="mt-16 space-y-12">
+          {skillCategories.map((category, catIndex) => (
+            <motion.div
+              key={category.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: catIndex * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="px-5 py-2.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors duration-200 cursor-default"
             >
-              {skill}
-            </motion.span>
+              <h3 className="text-lg font-medium mb-4">{category.title}</h3>
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, index) => (
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    className="px-5 py-2.5 border border-border rounded-full text-sm text-muted-foreground hover:text-foreground hover:border-foreground transition-colors duration-200 cursor-default"
+                  >
+                    {skill}
+                  </motion.span>
+                ))}
+              </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

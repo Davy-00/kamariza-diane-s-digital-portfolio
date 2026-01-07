@@ -1,12 +1,11 @@
-import Navigation from "@/components/Navigation";
+import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
+    <Layout>
       <Hero />
-    </div>
+    </Layout>
   );
 };
 

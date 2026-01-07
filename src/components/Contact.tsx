@@ -3,7 +3,7 @@ import { Mail, Linkedin, MapPin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-32 px-6">
+    <section className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -69,15 +69,17 @@ const Contact = () => {
           </div>
         </motion.div>
 
+        {/* Availability notice */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-32 pt-8 border-t border-border text-center"
+          className="mt-16 p-8 border border-border rounded-2xl text-center"
         >
-          <p className="text-sm text-muted-foreground">
-            © 2025 Kamariza Diane. All rights reserved.
+          <h3 className="text-lg font-medium mb-2">Open to Opportunities</h3>
+          <p className="text-muted-foreground">
+            Currently available for full-time positions and exciting collaborations.
           </p>
         </motion.div>
       </div>
