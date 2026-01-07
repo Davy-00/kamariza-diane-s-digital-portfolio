@@ -9,11 +9,11 @@ const experiences = [
       "Leading internal operations and process optimization initiatives, implementing efficient workflows and driving organizational excellence.",
   },
   {
-    company: "Phones Stor",
-    role: "Internal Operations Specialist",
+    company: "Dream City",
+    role: "Shop Assistant",
     period: "2024 — January 2025",
     description:
-      "Managed day-to-day operational activities, streamlined internal processes, and coordinated cross-functional teams for optimal efficiency.",
+      "Assisted customers with electronic device purchases, provided product recommendations, managed inventory, and ensured excellent customer service in a fast-paced retail environment.",
   },
 ];
 
