@@ -1,70 +1,137 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { jsPDF } from "jspdf";
 
 const CVDownload = () => {
   const handleDownload = () => {
-    // Create CV content
-    const cvContent = `
-KAMARIZA DIANE
-Operations Manager & Internal Operations Specialist
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CONTACT
-Email: kamariza.diane@email.com
-Location: Kigali, Rwanda
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PROFESSIONAL SUMMARY
-Results-driven Operations Manager with expertise in streamlining processes, 
-optimizing workflows, and driving organizational efficiency. Passionate about 
-creating systems that empower teams to perform at their best.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EXPERIENCE
-
-IWANYU
-Operations Manager | June 2025 — Present
-• Leading internal operations and process optimization initiatives
-• Implementing efficient workflows and operational strategies
-• Managing cross-functional teams and stakeholder relationships
-• Driving continuous improvement across all operational areas
-
-PHONES STOR
-Internal Operations Specialist | 2024 — January 2025
-• Managed day-to-day operational activities and inventory systems
-• Streamlined internal processes for improved efficiency
-• Coordinated with teams to ensure smooth operations
-• Developed and maintained operational documentation
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-SKILLS
-• Process Optimization
-• Team Leadership
-• Strategic Planning
-• Project Management
-• Inventory Management
-• Data Analysis
-• Workflow Design
-• Cross-functional Collaboration
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    `.trim();
-
-    // Create blob and download
-    const blob = new Blob([cvContent], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "Kamariza_Diane_CV.txt";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const doc = new jsPDF();
+    
+    // Set up fonts and colors
+    const primaryColor = [51, 51, 51] as const;
+    const mutedColor = [102, 102, 102] as const;
+    
+    let y = 20;
+    
+    // Header
+    doc.setFontSize(24);
+    doc.setTextColor(...primaryColor);
+    doc.text("KAMARIZA DIANE", 20, y);
+    y += 10;
+    
+    doc.setFontSize(12);
+    doc.setTextColor(...mutedColor);
+    doc.text("Operations Manager & Internal Operations Specialist", 20, y);
+    y += 15;
+    
+    // Divider
+    doc.setDrawColor(200, 200, 200);
+    doc.line(20, y, 190, y);
+    y += 10;
+    
+    // Contact
+    doc.setFontSize(14);
+    doc.setTextColor(...primaryColor);
+    doc.text("CONTACT", 20, y);
+    y += 8;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(...mutedColor);
+    doc.text("Email: kamariza.diane@email.com", 20, y);
+    y += 6;
+    doc.text("Phone: +250 788 123 456", 20, y);
+    y += 6;
+    doc.text("Location: Kigali, Rwanda", 20, y);
+    y += 15;
+    
+    // Divider
+    doc.line(20, y, 190, y);
+    y += 10;
+    
+    // Professional Summary
+    doc.setFontSize(14);
+    doc.setTextColor(...primaryColor);
+    doc.text("PROFESSIONAL SUMMARY", 20, y);
+    y += 8;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(...mutedColor);
+    const summary = doc.splitTextToSize(
+      "Results-driven Operations Manager with expertise in streamlining processes, optimizing workflows, and driving organizational efficiency. Passionate about creating systems that empower teams to perform at their best.",
+      170
+    );
+    doc.text(summary, 20, y);
+    y += summary.length * 6 + 10;
+    
+    // Divider
+    doc.line(20, y, 190, y);
+    y += 10;
+    
+    // Experience
+    doc.setFontSize(14);
+    doc.setTextColor(...primaryColor);
+    doc.text("EXPERIENCE", 20, y);
+    y += 10;
+    
+    // IWANYU
+    doc.setFontSize(12);
+    doc.setTextColor(...primaryColor);
+    doc.text("IWANYU", 20, y);
+    y += 6;
+    doc.setFontSize(10);
+    doc.setTextColor(...mutedColor);
+    doc.text("Operations Manager | June 2025 — Present", 20, y);
+    y += 6;
+    doc.text("• Leading internal operations and process optimization initiatives", 25, y);
+    y += 5;
+    doc.text("• Implementing efficient workflows and operational strategies", 25, y);
+    y += 5;
+    doc.text("• Managing cross-functional teams and stakeholder relationships", 25, y);
+    y += 5;
+    doc.text("• Driving continuous improvement across all operational areas", 25, y);
+    y += 12;
+    
+    // PHONES STOR
+    doc.setFontSize(12);
+    doc.setTextColor(...primaryColor);
+    doc.text("PHONES STOR", 20, y);
+    y += 6;
+    doc.setFontSize(10);
+    doc.setTextColor(...mutedColor);
+    doc.text("Internal Operations Specialist | 2024 — January 2025", 20, y);
+    y += 6;
+    doc.text("• Managed day-to-day operational activities and inventory systems", 25, y);
+    y += 5;
+    doc.text("• Streamlined internal processes for improved efficiency", 25, y);
+    y += 5;
+    doc.text("• Coordinated with teams to ensure smooth operations", 25, y);
+    y += 5;
+    doc.text("• Developed and maintained operational documentation", 25, y);
+    y += 15;
+    
+    // Divider
+    doc.line(20, y, 190, y);
+    y += 10;
+    
+    // Skills
+    doc.setFontSize(14);
+    doc.setTextColor(...primaryColor);
+    doc.text("SKILLS", 20, y);
+    y += 8;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(...mutedColor);
+    const skills = [
+      "Process Optimization • Team Leadership • Strategic Planning • Project Management",
+      "Inventory Management • Data Analysis • Workflow Design • Cross-functional Collaboration"
+    ];
+    skills.forEach(skill => {
+      doc.text(skill, 20, y);
+      y += 6;
+    });
+    
+    // Save PDF
+    doc.save("Kamariza_Diane_CV.pdf");
   };
 
   return (
