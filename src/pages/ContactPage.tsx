@@ -1,13 +1,15 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
+import Contact from "@/components/Contact";
 
-const Index = () => {
+const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <Hero />
+      <div className="pt-20">
+        <Contact />
+      </div>
     </div>
   );
 };
 
-export default Index;
+export default ContactPage;
