@@ -123,22 +123,22 @@ const CVDownload = () => {
     doc.text("• Driving continuous improvement across all operational areas", 25, y);
     y += 12;
     
-    // PHONES STOR
+    // DREAM CITY
     doc.setFontSize(12);
     doc.setTextColor(...primaryColor);
-    doc.text("PHONES STOR", 20, y);
+    doc.text("DREAM CITY", 20, y);
     y += 6;
     doc.setFontSize(10);
     doc.setTextColor(...mutedColor);
-    doc.text("Internal Operations Specialist | 2024 — January 2025", 20, y);
+    doc.text("Shop Assistant | 2024 — January 2025", 20, y);
     y += 6;
-    doc.text("• Managed day-to-day operational activities and inventory systems", 25, y);
+    doc.text("• Assisted customers with electronic device purchases and inquiries", 25, y);
     y += 5;
-    doc.text("• Streamlined internal processes for improved efficiency", 25, y);
+    doc.text("• Provided product recommendations based on customer needs", 25, y);
     y += 5;
-    doc.text("• Coordinated with teams to ensure smooth operations", 25, y);
+    doc.text("• Managed inventory and maintained organized product displays", 25, y);
     y += 5;
-    doc.text("• Developed and maintained operational documentation", 25, y);
+    doc.text("• Ensured excellent customer service in a fast-paced retail environment", 25, y);
     y += 15;
     
     // Divider
