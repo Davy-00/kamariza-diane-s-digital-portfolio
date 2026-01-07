@@ -32,22 +32,22 @@ const Contact = () => {
           className="mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-6"
         >
           <a
-            href="mailto:kamariza.diane@email.com"
+            href="mailto:dianekamariza139@gmail.com"
             className="group flex items-center gap-3 px-6 py-4 border border-border rounded-full hover:border-foreground transition-colors duration-300"
           >
             <Mail className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-              kamariza.diane@email.com
+              dianekamariza139@gmail.com
             </span>
           </a>
 
           <a
-            href="tel:+250788123456"
+            href="tel:+250798610543"
             className="group flex items-center gap-3 px-6 py-4 border border-border rounded-full hover:border-foreground transition-colors duration-300"
           >
             <Phone className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-              +250 788 123 456
+              +250 798 610 543
             </span>
           </a>
 
