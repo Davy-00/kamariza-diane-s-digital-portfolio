@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const Hero = () => {
   return (
@@ -17,11 +17,11 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="relative w-32 h-32 md:w-40 md:h-40 mx-auto">
+          <div className="relative w-40 h-40.88 md:w-50 md:h-50 mx-auto">
             <img
               src={profilePhoto}
               alt="Kamariza Diane"
-              className="w-full h-full object-cover rounded-full ring-2 ring-border/50"
+              className="w-full h-full object-cover object-center rounded-full ring-2 ring-border/50"
             />
             <motion.div
               className="absolute inset-0 rounded-full ring-2 ring-primary/20"
