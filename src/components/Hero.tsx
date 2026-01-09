@@ -17,7 +17,7 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.8, ease: "easeOut" }}
           className="mb-8"
         >
-          <div className="relative w-40 h-40.88 md:w-50 md:h-50 mx-auto">
+          <div className="relative w-40 h-40 md:w-48 md:h-48 mx-auto">
             <img
               src={profilePhoto}
               alt="Kamariza Diane"
@@ -55,8 +55,8 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          Transforming complexity into seamless operations. 
-          Building efficient systems that empower teams to thrive.
+          Turning complexity into scalable, high-performing operations.
+          Designing practical systems that help teams deliver consistently.
         </motion.p>
       </motion.div>
 

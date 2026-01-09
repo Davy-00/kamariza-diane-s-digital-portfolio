@@ -5,17 +5,17 @@ const values = [
   {
     icon: Target,
     title: "Goal-Oriented",
-    description: "Focused on delivering measurable results and achieving organizational objectives.",
+    description: "Committed to measurable outcomes and alignment with organisational priorities.",
   },
   {
     icon: Users,
     title: "Team Player",
-    description: "Collaborative approach that brings out the best in every team member.",
+    description: "Collaborative leadership that strengthens teams and improves execution.",
   },
   {
     icon: Lightbulb,
     title: "Innovative",
-    description: "Always seeking creative solutions to complex operational challenges.",
+    description: "Proactive problem-solving grounded in structure, data, and practicality.",
   },
 ];
 
@@ -43,17 +43,13 @@ const About = () => {
 
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm passionate about streamlining processes and creating systems 
-              that enable organizations to operate at their full potential.
+              I am passionate about streamlining processes and building systems that help organisations operate efficiently and reliably.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With experience in both retail operations and organizational 
-              management, I bring a unique perspective to solving complex 
-              operational challenges.
+              With experience across retail operations and organisational management, I bring a practical perspective to solving complex operational challenges.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My approach combines analytical thinking with a deep understanding 
-              of human dynamics to build processes that work for everyone.
+              My approach blends analytical thinking with a people-centred mindset to design processes that are clear, usable, and sustainable.
             </p>
           </div>
         </motion.div>

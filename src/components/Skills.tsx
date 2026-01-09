@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 const skillCategories = [
   {
     title: "Operations",
-    skills: ["Process Optimization", "Workflow Design", "Inventory Management", "Quality Control"],
+    skills: ["Process Improvement (Lean)", "SOP Development", "Inventory Management", "Vendor Management"],
   },
   {
-    title: "Leadership",
-    skills: ["Team Leadership", "Cross-functional Collaboration", "Stakeholder Management", "Mentoring"],
+    title: "Tools",
+    skills: ["Microsoft Excel", "Google Workspace", "Trello / Asana", "Slack / Microsoft Teams"],
   },
   {
-    title: "Strategy",
-    skills: ["Strategic Planning", "Project Management", "Data Analysis", "Performance Metrics"],
+    title: "Analytics & Delivery",
+    skills: ["KPI Reporting", "Project Management", "Power BI (Basics)", "Documentation & Reporting"],
   },
 ];
 
@@ -32,7 +32,7 @@ const Skills = () => {
             Skills & Capabilities
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            A diverse skill set developed through hands-on experience in operations and management.
+            A practical toolkit built through hands-on operations work, structured delivery, and continuous improvement.
           </p>
         </motion.div>
 

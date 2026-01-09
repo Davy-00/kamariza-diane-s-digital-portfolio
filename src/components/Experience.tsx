@@ -6,14 +6,14 @@ const experiences = [
     role: "Operations Manager",
     period: "June 2025 — Present",
     description:
-      "Leading internal operations and process optimization initiatives, implementing efficient workflows and driving organizational excellence.",
+      "Leading internal operations and continuous improvement initiatives, standardising workflows and strengthening execution across teams.",
   },
   {
     company: "Dream City",
     role: "Shop Assistant",
     period: "2024 — January 2025",
     description:
-      "Assisted customers with electronic device purchases, provided product recommendations, managed inventory, and ensured excellent customer service in a fast-paced retail environment.",
+      "Supported customers with electronics purchases, provided product guidance, maintained inventory accuracy, and delivered consistent service in a fast-paced retail setting.",
   },
 ];
 
@@ -34,7 +34,7 @@ const Experience = () => {
             Work History
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            A journey of growth, learning, and delivering results across different roles and industries.
+            Experience focused on operational delivery, continuous improvement, and results across diverse roles.
           </p>
         </motion.div>
 
