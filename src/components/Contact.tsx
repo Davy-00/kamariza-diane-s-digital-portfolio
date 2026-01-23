@@ -32,12 +32,12 @@ const Contact = () => {
           className="mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center gap-4 md:gap-6"
         >
           <a
-            href="mailto:dianekamariza139@gmail.com"
+            href="mailto:kamarizadiana007@gmail.com"
             className="group flex items-center gap-3 px-6 py-4 border border-border rounded-full hover:border-foreground transition-colors duration-300"
           >
             <Mail className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-colors" />
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-              dianekamariza139@gmail.com
+              kamarizadiana007@gmail.com
             </span>
           </a>
 

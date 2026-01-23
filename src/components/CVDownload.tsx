@@ -69,7 +69,7 @@ const CVDownload = () => {
     
     doc.setFontSize(11);
     doc.setTextColor(...mutedColor);
-    doc.text("Email: dianekamariza139@gmail.com", 20, y);
+    doc.text("Email: kamarizadiana007@gmail.com", 20, y);
     y += 6;
     doc.text("Phone: +250 798 610 543", 20, y);
     y += 6;

@@ -2,18 +2,36 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "Iwanyu",
-    role: "Operations Manager",
-    period: "June 2025 — Present",
+    company: "Merry360X",
+    website: "https://merry360x.com",
+    role: "Software Developer & Embedded Systems Engineer",
+    period: "2026 — Present",
     description:
-      "Leading internal operations and continuous improvement initiatives, standardising workflows and strengthening execution across teams.",
+      "Developing software solutions and embedded systems for merry360x.com. Building scalable applications, working on IoT integration projects, and creating robust systems bridging software and hardware technologies.",
   },
   {
-    company: "Dream City",
-    role: "Shop Assistant",
-    period: "2024 — January 2025",
+    company: "Merry360 Global",
+    website: "https://merry360global.com",
+    role: "Software Developer & Embedded Systems Engineer",
+    period: "2025 — Present",
     description:
-      "Supported customers with electronics purchases, provided product guidance, maintained inventory accuracy, and delivered consistent service in a fast-paced retail setting.",
+      "Developing innovative software solutions and embedded systems for merry360global.com. Building scalable web applications, implementing IoT systems, and creating intelligent hardware-software integrations for global digital platforms.",
+  },
+  {
+    company: "Iwanyu",
+    website: "https://iwanyu.store",
+    role: "Full-Stack Developer",
+    period: "2023 — Present",
+    description:
+      "Developing and maintaining e-commerce platform (iwanyu.store), implementing features for product catalog management, shopping cart functionality, and user experience optimization. Building responsive web applications using modern technologies.",
+  },
+  {
+    company: "SpplyPlus",
+    website: "https://spplyplus.store",
+    role: "Full-Stack Developer",
+    period: "2021 — 2022",
+    description:
+      "Developed and maintained e-commerce platform (spplyplus.store), implementing features for inventory management, payment processing, and customer experience optimization. Built responsive web applications using modern frameworks and technologies.",
   },
 ];
 
@@ -34,7 +52,7 @@ const Experience = () => {
             Work History
           </h2>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-            Experience focused on operational delivery, continuous improvement, and results across diverse roles.
+            Professional experience in software development, embedded systems engineering, and building scalable digital solutions.
           </p>
         </motion.div>
 
@@ -51,7 +69,23 @@ const Experience = () => {
               <div className="absolute left-0 top-0 w-2 h-2 -translate-x-[5px] rounded-full bg-muted-foreground group-hover:bg-foreground transition-colors duration-300" />
               
               <span className="text-sm text-muted-foreground">{exp.period}</span>
-              <h3 className="mt-2 text-2xl font-display font-medium">{exp.company}</h3>
+              <h3 className="mt-2 text-2xl font-display font-medium">
+                {exp.website ? (
+                  <a 
+                    href={exp.website} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-foreground/80 transition-colors inline-flex items-center gap-2"
+                  >
+                    {exp.company}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                ) : (
+                  exp.company
+                )}
+              </h3>
               <p className="mt-1 text-muted-foreground">{exp.role}</p>
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 {exp.description}

@@ -4,18 +4,18 @@ import { Target, Users, Lightbulb } from "lucide-react";
 const values = [
   {
     icon: Target,
-    title: "Goal-Oriented",
-    description: "Committed to measurable outcomes and alignment with organisational priorities.",
+    title: "Quality-Focused",
+    description: "Committed to writing clean, maintainable code and delivering robust solutions.",
   },
   {
     icon: Users,
-    title: "Team Player",
-    description: "Collaborative leadership that strengthens teams and improves execution.",
+    title: "Collaborative",
+    description: "Strong team player with excellent communication skills across technical and non-technical teams.",
   },
   {
     icon: Lightbulb,
     title: "Innovative",
-    description: "Proactive problem-solving grounded in structure, data, and practicality.",
+    description: "Creative problem-solver with expertise in emerging technologies and embedded systems.",
   },
 ];
 
@@ -37,19 +37,19 @@ const About = () => {
             <h2 className="mt-4 text-4xl md:text-5xl font-display font-light tracking-tight">
               Driven by
               <br />
-              Efficiency
+              Innovation
             </h2>
           </div>
 
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I am passionate about streamlining processes and building systems that help organisations operate efficiently and reliably.
+              I am a passionate software developer and embedded systems engineer dedicated to creating innovative solutions that bridge software and hardware.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With experience across retail operations and organisational management, I bring a practical perspective to solving complex operational challenges.
+              With experience developing web applications, e-commerce platforms, and embedded systems, I bring a comprehensive approach to building technology that solves real-world problems.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My approach blends analytical thinking with a people-centred mindset to design processes that are clear, usable, and sustainable.
+              My expertise spans full-stack development, IoT systems, and embedded programming, allowing me to create seamless integrations between digital and physical systems.
             </p>
           </div>
         </motion.div>

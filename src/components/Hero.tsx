@@ -37,7 +37,7 @@ const Hero = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-sm tracking-[0.3em] text-muted-foreground uppercase"
         >
-          Operations Manager
+          Software Developer & Embedded Systems Engineer
         </motion.span>
 
         <motion.h1
@@ -55,8 +55,8 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          Turning complexity into scalable, high-performing operations.
-          Designing practical systems that help teams deliver consistently.
+          Building innovative software solutions and embedded systems.
+          Transforming ideas into robust, scalable applications and intelligent hardware systems.
         </motion.p>
       </motion.div>
 
