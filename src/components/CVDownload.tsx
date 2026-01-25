@@ -53,7 +53,7 @@ const CVDownload = () => {
     
     doc.setFontSize(12);
     doc.setTextColor(...mutedColor);
-    doc.text("Operations Manager & Internal Operations Specialist", 20, y);
+    doc.text("Software Developer & Embedded Systems Engineer", 20, y);
     y += 25; // Extra space to clear the photo
     
     // Divider (positioned below the photo)
@@ -89,7 +89,7 @@ const CVDownload = () => {
     doc.setFontSize(11);
     doc.setTextColor(...mutedColor);
     const summary = doc.splitTextToSize(
-      "Results-driven Operations Manager with expertise in streamlining processes, optimizing workflows, and driving organizational efficiency. Passionate about creating systems that empower teams to perform at their best.",
+      "Passionate Software Developer and Embedded Systems Engineer dedicated to creating innovative solutions that bridge software and hardware. Expertise in full-stack development, IoT systems, and embedded programming with experience building e-commerce platforms and intelligent hardware-software integrations.",
       170
     );
     doc.text(summary, 20, y);
@@ -105,62 +105,141 @@ const CVDownload = () => {
     doc.text("EXPERIENCE", 20, y);
     y += 10;
     
+    // MERRY360X
+    doc.setFontSize(12);
+    doc.setTextColor(...primaryColor);
+    doc.text("MERRY360X", 20, y);
+    doc.setFontSize(10);
+    doc.setTextColor(...mutedColor);
+    doc.text("(merry360x.com)", 46, y);
+    y += 6;
+    doc.text("Software Developer & Embedded Systems Engineer | 2026 — Present", 20, y);
+    y += 6;
+    doc.text("• Developing software solutions and embedded systems", 25, y);
+    y += 5;
+    doc.text("• Building scalable applications and IoT integration projects", 25, y);
+    y += 5;
+    doc.text("• Creating robust systems bridging software and hardware technologies", 25, y);
+    y += 12;
+    
+    // MERRY360 GLOBAL
+    doc.setFontSize(12);
+    doc.setTextColor(...primaryColor);
+    doc.text("MERRY360 GLOBAL", 20, y);
+    doc.setFontSize(10);
+    doc.setTextColor(...mutedColor);
+    doc.text("(merry360global.com)", 58, y);
+    y += 6;
+    doc.text("Software Developer & Embedded Systems Engineer | 2025 — Present", 20, y);
+    y += 6;
+    doc.text("• Developing innovative software solutions and embedded systems", 25, y);
+    y += 5;
+    doc.text("• Building scalable web applications and implementing IoT systems", 25, y);
+    y += 5;
+    doc.text("• Creating intelligent hardware-software integrations", 25, y);
+    y += 12;
+    
     // IWANYU
     doc.setFontSize(12);
     doc.setTextColor(...primaryColor);
     doc.text("IWANYU", 20, y);
-    y += 6;
     doc.setFontSize(10);
     doc.setTextColor(...mutedColor);
-    doc.text("Operations Manager | June 2025 — Present", 20, y);
+    doc.text("(iwanyu.store)", 38, y);
     y += 6;
-    doc.text("• Leading internal operations and process optimization initiatives", 25, y);
+    doc.text("Full-Stack Developer | 2023 — Present", 20, y);
+    y += 6;
+    doc.text("• Developing and maintaining e-commerce platform", 25, y);
     y += 5;
-    doc.text("• Implementing efficient workflows and operational strategies", 25, y);
+    doc.text("• Implementing product catalog, shopping cart, and user experience features", 25, y);
     y += 5;
-    doc.text("• Managing cross-functional teams and stakeholder relationships", 25, y);
-    y += 5;
-    doc.text("• Driving continuous improvement across all operational areas", 25, y);
+    doc.text("• Building responsive web applications using modern technologies", 25, y);
     y += 12;
     
-    // DREAM CITY
+    // SPPLYPLUS
     doc.setFontSize(12);
     doc.setTextColor(...primaryColor);
-    doc.text("DREAM CITY", 20, y);
-    y += 6;
+    doc.text("SPPLYPLUS", 20, y);
     doc.setFontSize(10);
     doc.setTextColor(...mutedColor);
-    doc.text("Shop Assistant | 2024 — January 2025", 20, y);
+    doc.text("(spplyplus.store)", 44, y);
     y += 6;
-    doc.text("• Assisted customers with electronic device purchases and inquiries", 25, y);
+    doc.text("Full-Stack Developer | 2021 — 2022", 20, y);
+    y += 6;
+    doc.text("• Developed e-commerce platform with inventory and payment processing", 25, y);
     y += 5;
-    doc.text("• Provided product recommendations based on customer needs", 25, y);
+    doc.text("• Implemented customer experience optimization features", 25, y);
     y += 5;
-    doc.text("• Managed inventory and maintained organized product displays", 25, y);
-    y += 5;
-    doc.text("• Ensured excellent customer service in a fast-paced retail environment", 25, y);
+    doc.text("• Built responsive applications using modern frameworks", 25, y);
     y += 15;
     
     // Divider
     doc.line(20, y, 190, y);
     y += 10;
     
+    // Check if we need a new page
+    if (y > 240) {
+      doc.addPage();
+      y = 20;
+    }
+    
     // Skills
     doc.setFontSize(14);
     doc.setTextColor(...primaryColor);
-    doc.text("SKILLS", 20, y);
+    doc.text("TECHNICAL SKILLS", 20, y);
     y += 8;
     
     doc.setFontSize(11);
     doc.setTextColor(...mutedColor);
     const skills = [
-      "Process Optimization • Team Leadership • Strategic Planning • Project Management",
-      "Inventory Management • Data Analysis • Workflow Design • Cross-functional Collaboration"
+      "Full-Stack Development • Embedded Systems • IoT Systems • Arduino Programming",
+      "Web Applications • E-commerce Platforms • Hardware-Software Integration",
+      "Sensor Integration • Robotics • Real-time Monitoring Systems • C/C++",
+      "React • TypeScript • JavaScript • Modern Web Frameworks"
     ];
     skills.forEach(skill => {
       doc.text(skill, 20, y);
       y += 6;
     });
+    
+    y += 10;
+    
+    // Projects
+    doc.setFontSize(14);
+    doc.setTextColor(...primaryColor);
+    doc.text("NOTABLE PROJECTS", 20, y);
+    y += 8;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(...mutedColor);
+    
+    doc.setFontSize(10);
+    doc.setTextColor(...primaryColor);
+    doc.text("• Arduino Smoke Detection System", 20, y);
+    y += 5;
+    doc.setTextColor(...mutedColor);
+    doc.text("  Built intelligent smoke detection with MQ-2 sensor, LCD display, PPM measurement", 20, y);
+    y += 7;
+    
+    doc.setTextColor(...primaryColor);
+    doc.text("• Temperature & Humidity Monitor", 20, y);
+    y += 5;
+    doc.setTextColor(...mutedColor);
+    doc.text("  Environmental monitoring system with DHT sensors and real-time LCD display", 20, y);
+    y += 7;
+    
+    doc.setTextColor(...primaryColor);
+    doc.text("• Autonomous Robot Car", 20, y);
+    y += 5;
+    doc.setTextColor(...mutedColor);
+    doc.text("  4-wheel drive obstacle-avoiding robot with ultrasonic sensors and motor control", 20, y);
+    y += 7;
+    
+    doc.setTextColor(...primaryColor);
+    doc.text("• E-commerce Platforms", 20, y);
+    y += 5;
+    doc.setTextColor(...mutedColor);
+    doc.text("  Built multiple full-featured online stores with inventory and payment systems", 20, y);
     
     // Save PDF
     doc.save("Kamariza_Diane_CV.pdf");
